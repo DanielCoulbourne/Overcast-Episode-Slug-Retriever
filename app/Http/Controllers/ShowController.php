@@ -18,7 +18,7 @@ class ShowController extends Controller
 
 		foreach ($objects as $episode) {
 			$eps[] = [
-				'slug' => $episode->getTag()->getAttribute('href')['value'],
+				'slug' => substr($episode->getTag()->getAttribute('href')['value'], 1),
 				'title' => $episode->find('.title')[0]->text
 			];
 		}
