@@ -1,21 +1,9 @@
-# Lumen PHP Framework
+# Overcast Episode Slug Retriever
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[Overcast](https://overcast.fm/) currently uses slugs [which cannot be retrieved programatically](https://twitter.com/marcoarment/status/856613907917680640). I wanted to make [an app](http://sharepod.dev) that linked to Podcast episodes in Overcast directly, so I need episode slugs to generate those URLS.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+For now I'll be hosting this as an [API on my server](http://overcastslugs.coulbourne.work).
 
-## Official Documentation
+If you intend to do more than a few random lookups here and there please don't hose my server, just pull the repo down and stand it up yourself.
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+This API will be slow because it depends on HTML scraping and parsing for its results. I hope one day Marco provides an endpoint for us to retrieve episode metadata, but it's his app and he's free to spend his time on it however he sees fit.
